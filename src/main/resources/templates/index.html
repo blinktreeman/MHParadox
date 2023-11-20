@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Monty Hall Paradox</title>
+</head>
+<body>
+<form method="post" action="#" th:action="@{/}" th:object="${gameParameter}">
+    <p>Задайте число итераций</p>
+    <input id="numberOfIterations" required type="number" th:field="*{numberOfIterations}"/>
+    <p>После открытия двери меняем решение</p>
+    <p>Да
+        <input id="changeOfChoice" type="checkbox" th:field="*{changeOfChoice}"/>
+    </p>
+    <input type="submit" value="Рассчитать">
+</form>
+
+</body>
+</html>
