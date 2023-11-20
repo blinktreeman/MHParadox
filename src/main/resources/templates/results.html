@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Результаты</title>
+</head>
+<body>
+<h2>Итоги</h2>
+<h3>Исходные значения</h3>
+<p>Количество выполненных итераций: <span th:text="${results.numbersOfIterations}"/></p>
+<p>Игрок менял свой выбор: <span th:text="${results.changeOfChoice}"/></p>
+<h3>Результаты</h3>
+<p>Удачных итераций всего: <span th:text="${results.positiveResults}"/></p>
+<p>Неудачных итераций всего: <span th:text="${results.getNegativeCount()}"/></p>
+<p>Удачных итераций в процентах от общего количества шагов цикла: <span th:text="${results.getPercent()*100}"/>%</p>
+<a th:href="@{~/}">Повторить с иными исходными данными</a>
+</body>
+</html>
